@@ -1,0 +1,15 @@
+# OMZ dependencies
+ohmyzsh/ohmyzsh path:lib
+
+# OMZ plugins
+ohmyzsh/ohmyzsh path:plugins/alias-finder
+ohmyzsh/ohmyzsh path:plugins/aliases
+ohmyzsh/ohmyzsh path:plugins/docker
+ohmyzsh/ohmyzsh path:plugins/docker-compose
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/nvm
+
+# external plugins
+ariaieboy/laravel-sail
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting   # must be last
