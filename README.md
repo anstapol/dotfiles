@@ -79,11 +79,14 @@ The script automatically creates symbolic links for the following configuration 
 - **[docker-buildx](https://docs.docker.com/buildx/working-with-buildx/)**: Docker CLI plugin for extended build capabilities with BuildKit.
 - **[docker-compose](https://docs.docker.com/compose/)**: Define and run multi-container applications with Docker.
 - **[doctl](https://github.com/digitalocean/doctl)**: The official command line interface for DigitalOcean.
+- **[fastfetch](https://github.com/fastfetch-cli/fastfetch)**: A neofetch-like tool for fetching system information and displaying them in a pretty way.
 - **[fzf](https://github.com/junegunn/fzf)**: A command-line fuzzy finder.
 - **[gemini-cli](https://github.com/GoogleCloudPlatform/gemini-cli)**: CLI for Google Gemini.
 - **[gh](https://cli.github.com/)**: GitHub’s official command line tool.
+- **[git](https://git-scm.com/)**: A free and open source distributed version control system.
 - **[gnupg](https://gnupg.org/)**: A complete and free implementation of the OpenPGP standard.
 - **[jq](https://stedolan.github.io/jq/)**: Command-line JSON processor.
+- **[kubernetes-cli](https://kubernetes.io/docs/reference/kubectl/overview/)**: A command-line tool for interacting with Kubernetes clusters.
 - **[mas](https://github.com/mas-cli/mas)**: A command-line interface for the Mac App Store.
 - **[neovim](https://neovim.io/)**: A hyperextensible Vim-based text editor.
 - **[nvm](https://github.com/nvm-sh/nvm)**: Node Version Manager - Simple bash script to manage multiple active Node.js versions.
@@ -102,16 +105,17 @@ The script automatically creates symbolic links for the following configuration 
 - **[brave-browser](https://brave.com/)**: A free and open-source web browser.
 - **[ChatGPT](https://chat.openai.com/)**: Desktop app for interacting with OpenAI's ChatGPT.
 - **[Claude](https://claude.ai/)**: An AI assistant developed by Anthropic.
-- **[cursor](https://cursor.sh/)**: An AI-first code editor.
 - **[Discord](https://discord.com/)**: A communication platform for voice, video, and text.
 - **[Figma](https://www.figma.com/)**: A web-based vector graphics editor and prototyping tool.
 - **[Firefox](https://www.mozilla.org/en-US/firefox/new/)**: A fast, private, and secure web browser.
 - **[Font JetBrains Mono](https://www.jetbrains.com/lp/mono/)**: A font optimized for programming.
 - **[ghostty](https://ghostty.app/)**: A modern terminal emulator for macOS.
 - **[Google Chrome](https://www.google.com/chrome/)**: A fast, simple, and secure web browser built by Google.
+- **[inkscape](https://inkscape.org/)**: A powerful, free and open-source vector graphics editor.
 - **[iStat Menus](https://bjango.com/mac/istatmenus/)**: A powerful system monitoring tool for macOS.
 - **[Lens](https://k8slens.dev/)**: The Kubernetes IDE for managing clusters efficiently.
 - **[Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html)**: A powerful and easy-to-use application that enhances your Logitech mice and keyboards.
+- **[nordvpn](https://nordvpn.com/)**: A VPN service that provides secure and private internet access.
 - **[OnlyOffice](https://www.onlyoffice.com/)**: A comprehensive office suite for document management and collaboration.
 - **[PHPStorm](https://www.jetbrains.com/phpstorm/)**: A professional IDE for PHP developers from JetBrains.
 - **[Postman](https://www.postman.com/)**: An API platform for building and using APIs.
@@ -137,16 +141,16 @@ The script automatically creates symbolic links for the following configuration 
 
 ### VSCode Extensions:
 
-- **[bradlc.vscode-tailwindcss](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)**: Intelligent Tailwind CSS tooling for VS Code.
+- **[bradlc.vscode-tailwindcss](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)**: Tailwind CSS IntelliSense.
 - **[catppuccin.catppuccin-vsc](https://marketplace.visualstudio.com/items?itemName=catppuccin.catppuccin-vsc)**: Catppuccin for VSCode.
+- **[catppuccin.catppuccin-vsc-icons](https://marketplace.visualstudio.com/items?itemName=catppuccin.catppuccin-vsc-icons)**: Catppuccin icons for VSCode.
 - **[dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**: Integrates ESLint into VS Code.
-- **[dsznajder.es7-react-js-snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)**: JavaScript and React/Redux snippets in ES7+ with Babel plugin features for VS Code.
-- **[eamodio.gitlens](httpshttps://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)**: Supercharge the Git capabilities built into Visual Studio Code.
+- **[eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)**: Supercharge the Git capabilities built into Visual Studio Code.
+- **[editorconfig.editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)**: EditorConfig for VS Code.
 - **[esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)**: Code formatter using Prettier.
 - **[github.copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)**: Your AI pair programmer.
 - **[github.copilot-chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)**: A chat interface for GitHub Copilot.
-- **[laravel.vscode-laravel](https://marketplace.visualstudio.com/items?itemName=laravel.vscode-laravel)**: Laravel Blade Snippets.
-- **[prisma.prisma](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)**: Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
+- **[redhat.vscode-yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)**: YAML Language Support by Red Hat, with built-in Kubernetes syntax support.
 
 ## Usefull commands
 
