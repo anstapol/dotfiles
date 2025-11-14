@@ -40,8 +40,34 @@ The script automatically creates symbolic links for the following configuration 
 
 - `.zshrc` to `~/.zshrc`
 - `.zsh_plugins.txt` to `~/.zsh_plugins.txt`
+- `.zsh_functions` to `~/.zsh_functions`
 - `.config/starship.toml` to `~/.config/starship.toml`
 - `.config/ghostty` to `~/.config/ghostty`
+
+## Customizations
+
+### Starship Prompt
+
+The Starship prompt is customized to provide a clean and informative right-aligned prompt. The prompt displays the following information:
+
+- **Git Status**: Shows the status of the current Git repository, including stashed, staged, modified, deleted, renamed, untracked, and conflicted files.
+- **Git Branch**: Displays the current Git branch.
+- **Node.js Version**: Shows the current Node.js version.
+- **Command Duration**: Displays the execution time of the last command.
+- **pnpm Version**: Shows the pnpm version when in a pnpm project.
+
+### `tinify` function
+
+A `tinify` shell function is available for image compression using `ffmpeg`. This function can process single images or a batch of images in the current directory.
+
+**Usage**: `tinify [options] <image(s)>`
+
+**Options**:
+- `-q, --quality <1-100>`: Quality level (default: 85)
+- `-o, --output <file>`: Output filename
+- `-b, --batch`: Process all images in current directory
+- `-v, --verbose`: Show detailed output
+- `-h, --help`: Show this help
 
 ## macOS Settings Applied
 
@@ -80,6 +106,7 @@ The script automatically creates symbolic links for the following configuration 
 - **[docker-compose](https://docs.docker.com/compose/)**: Define and run multi-container applications with Docker.
 - **[doctl](https://github.com/digitalocean/doctl)**: The official command line interface for DigitalOcean.
 - **[fastfetch](https://github.com/fastfetch-cli/fastfetch)**: A neofetch-like tool for fetching system information and displaying them in a pretty way.
+- **[ffmpeg](https://ffmpeg.org/)**: A complete, cross-platform solution to record, convert and stream audio and video.
 - **[fzf](https://github.com/junegunn/fzf)**: A command-line fuzzy finder.
 - **[gemini-cli](https://github.com/GoogleCloudPlatform/gemini-cli)**: CLI for Google Gemini.
 - **[gh](https://cli.github.com/)**: GitHub’s official command line tool.
@@ -151,6 +178,7 @@ The script automatically creates symbolic links for the following configuration 
 - **[github.copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)**: Your AI pair programmer.
 - **[github.copilot-chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)**: A chat interface for GitHub Copilot.
 - **[redhat.vscode-yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)**: YAML Language Support by Red Hat, with built-in Kubernetes syntax support.
+- **[xyz.local-history](https://marketplace.visualstudio.com/items?itemName=xyz.local-history)**: A local history of files to recover from accidental changes.
 
 ## Usefull commands
 

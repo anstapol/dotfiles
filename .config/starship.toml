@@ -1,5 +1,5 @@
 format = """$directory$character"""
-right_format = """$all"""
+right_format = """$git_status$git_branch$nodejs$custom$cmd_duration"""
 palette = "catppuccin_mocha"
 
 [palettes.catppuccin_mocha]
@@ -29,3 +29,34 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+
+[git_branch]
+format = " $branch "
+
+[git_status]
+format = "$stashed$staged$modified$deleted$renamed$untracked$conflicted$ahead_behind "
+staged      = "◌"
+modified    = ""
+deleted     = ""
+renamed     = ""
+untracked   = "◇"
+stashed     = ""
+conflicted  = ""
+ahead       = ""
+behind      = ""
+diverged    = "󰹹"
+
+[nodejs]
+format = " $version "
+
+[cmd_duration]
+format = "󰥔 [$duration]($style)"
+
+[aws]
+disabled = true
+
+[custom.pnpm]
+command = "pnpm -v"
+detect_files = ["package.json"]
+format = " [$output](bold blue) "
+

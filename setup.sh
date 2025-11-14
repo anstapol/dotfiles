@@ -35,7 +35,7 @@ fi
 
 # Symlink dotfiles
 echo "Creating symlinks for dotfiles..."
-DOTFILES=(".zshrc" ".zsh_plugins.txt")
+DOTFILES=(".zshrc" ".zsh_plugins.txt" ".zsh_functions")
 
 for file in "${DOTFILES[@]}"; do
   source_file="$(pwd)/$file"
