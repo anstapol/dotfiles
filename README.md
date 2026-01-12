@@ -133,15 +133,17 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[brave-browser](https://brave.com/)**: A free and open-source web browser.
 - **[ChatGPT](https://chat.openai.com/)**: Desktop app for interacting with OpenAI's ChatGPT.
 - **[Claude](https://claude.ai/)**: An AI assistant developed by Anthropic.
+- **[Claude Code](https://claude.ai/code)**: A CLI coding assistant by Anthropic.
 - **[cursor](https://cursor.so/)**: An AI-powered code editor.
+- **[Cyberduck](https://cyberduck.io/)**: A libre server and cloud storage browser.
 - **[Discord](https://discord.com/)**: A communication platform for voice, video, and text.
 - **[Figma](https://www.figma.com/)**: A web-based vector graphics editor and prototyping tool.
 - **[Firefox](https://www.mozilla.org/en-US/firefox/new/)**: A fast, private, and secure web browser.
 - **[font-maple-mono-nf](https://github.com/subframe7536/maple-font)**: A monospace font for developers.
+- **[gcloud-cli](https://cloud.google.com/sdk/gcloud)**: Google Cloud SDK command-line tools.
 - **[ghostty](https://ghostty.app/)**: A modern terminal emulator for macOS.
 - **[iStat Menus](https://bjango.com/mac/istatmenus/)**: A powerful system monitoring tool for macOS.
 - **[Lens](https://k8slens.dev/)**: The Kubernetes IDE for managing clusters efficiently.
-- **[Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html)**: A powerful and easy-to-use application that enhances your Logitech mice and keyboards.
 - **[nordvpn](https://nordvpn.com/)**: A VPN service that provides secure and private internet access.
 - **[OnlyOffice](https://www.onlyoffice.com/)**: A comprehensive office suite for document management and collaboration.
 - **[PHPStorm](https://www.jetbrains.com/phpstorm/)**: A professional IDE for PHP developers from JetBrains.
@@ -154,6 +156,7 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[tailscale-app](https://tailscale.com/)**: Zero config VPN for building secure networks.
 - **[Telegram](https://telegram.org/)**: A cloud-based instant messaging, video telephony, and VoIP service.
 - **[Transmission](https://transmissionbt.com/)**: A fast, easy, and free BitTorrent client.
+- **[Visual Studio Code](https://code.visualstudio.com/)**: A lightweight but powerful source code editor.
 - **[VLC](https://www.videolan.org/vlc/)**: A free and open-source cross-platform multimedia player.
 - **[WhatsApp](https://www.whatsapp.com/)**: A free messaging and video calling app.
 - **[zulu@17](https://www.azul.com/downloads/)**: An open-source build of the Java Development Kit (JDK).
@@ -167,18 +170,17 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 
 ### VSCode Extensions:
 
+- **[anthropic.claude-code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)**: Claude Code extension for VS Code.
+- **[biomejs.biome](https://marketplace.visualstudio.com/items?itemName=biomejs.biome)**: Biome - a fast formatter and linter for JavaScript/TypeScript.
 - **[bradlc.vscode-tailwindcss](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)**: Tailwind CSS IntelliSense.
 - **[catppuccin.catppuccin-vsc](https://marketplace.visualstudio.com/items?itemName=catppuccin.catppuccin-vsc)**: Catppuccin for VSCode.
-- **[catppuccin.catppuccin-vsc-icons](https://marketplace.visualstudio.com/items?itemName=catppuccin.catppuccin-vsc-icons)**: Catppuccin icons for VSCode.
-- **[csstools.postcss](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)**: PostCSS Language Support.
-- **[dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**: Integrates ESLint into VS Code.
-- **[dsznajder.es7-react-js-snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)**: ES7+ React/Redux/React-Native snippets.
-- **[eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)**: Supercharge the Git capabilities built into Visual Studio Code.
 - **[editorconfig.editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)**: EditorConfig for VS Code.
-- **[esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)**: Code formatter using Prettier.
+- **[github.copilot](https://marketplace.visualstudio.com/items?itemName=github.copilot)**: AI-powered code completion from GitHub.
+- **[github.copilot-chat](https://marketplace.visualstudio.com/items?itemName=github.copilot-chat)**: Chat interface for GitHub Copilot.
+- **[github.vscode-github-actions](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions)**: GitHub Actions workflows support.
+- **[ms-playwright.playwright](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright)**: Run Playwright tests in VS Code.
 - **[prisma.prisma](https://marketplace.visualstudio.com/items?itemName=prisma.prisma)**: Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
-- **[redhat.vscode-yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)**: YAML Language Support by Red Hat, with built-in Kubernetes syntax support.
-- **[vscodevim.vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)**: Vim emulation for Visual Studio Code.
+- **[thang-nm.catppuccin-perfect-icons](https://marketplace.visualstudio.com/items?itemName=thang-nm.catppuccin-perfect-icons)**: Catppuccin-themed file icons.
 - **[xyz.local-history](https://marketplace.visualstudio.com/items?itemName=xyz.local-history)**: A local history of files to recover from accidental changes.
 
 ## Usefull commands
