@@ -50,11 +50,24 @@ esac
 alias p='pnpm'
 
 # ================================
+# Android
+# ================================
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+
+# ================================
+# Bun
+# ================================
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# ================================
 # Aliases
 # ================================
 alias ip='dig @resolver4.opendns.com myip.opendns.com +short'
 alias ip6='dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6'
 alias up='brew upgrade && brew upgrade --cask -g && brew cleanup'
+alias t='turbo'
 
 # ================================
 # Functions
