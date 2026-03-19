@@ -60,6 +60,7 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+alias b='bun'
 
 # ================================
 # Aliases
@@ -68,9 +69,24 @@ alias ip='dig @resolver4.opendns.com myip.opendns.com +short'
 alias ip6='dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6'
 alias up='brew upgrade && brew upgrade --cask -g && brew cleanup'
 alias t='turbo'
+alias vps='ssh vps'
+alias cc='claude --dangerously-skip-permissions'
+alias ccpf='claude-profiles'
 
 # ================================
 # Functions
 # ================================
 source "$HOME/.zsh_functions"
 
+# ================================
+# Doobee
+# ================================
+export PATH="$HOME/Projects/doobee/bin:$PATH"
+
+# ================================
+# Local
+# ================================
+export PATH="$HOME/.local/bin:$PATH"
+
+# bun completions
+[ -s "/Users/anstapol/.bun/_bun" ] && source "/Users/anstapol/.bun/_bun"

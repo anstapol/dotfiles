@@ -42,12 +42,26 @@ tinify() {
   # Batch processing
   if [ "$batch" = true ]; then
     local count=0
-    for img in *.{jpg,jpeg,png,JPG,JPEG,PNG}(N); do
-      [ -f "$img" ] || continue
-      tinify -q "$quality" "$img"
+    echo "Scanning for images in: $(pwd)"
+    
+    # Enable null_glob for this function only
+    setopt local_options null_glob
+    
+    # Process all image files
+    for img in *.{jpg,jpeg,png,JPG,JPEG,PNG,webp,WEBP}; do
+      # This check is now redundant with null_glob but kept for safety
+      [[ -f "$img" ]] || continue
+      
+      echo "Processing: $img"
+      tinify -q "$quality" ${verbose:+-v} "$img" || echo "Failed to process $img"
       ((count++))
     done
-    echo "Processed $count images"
+    
+    if [ $count -eq 0 ]; then
+      echo "No images found in current directory"
+    else
+      echo "Successfully processed $count images"
+    fi
     return 0
   fi
   
@@ -70,29 +84,29 @@ tinify() {
   local extension="${input##*.}"
   local output_file="${output:-${filename}_compressed.${extension}}"
   
-  # Get original size
+  # Get original size (macOS compatible)
   local original_size=$(stat -f%z "$input" 2>/dev/null || stat -c%s "$input" 2>/dev/null)
   
   # Compression based on format
-  local ffmpeg_cmd=""
   case "${extension:l}" in
     jpg|jpeg)
+      local q_val=$((10 - quality / 10))
       if [ "$verbose" = true ]; then
-        ffmpeg -i "$input" -qscale:v $((100-quality))/10 -qmin $((100-quality))/10 -qmax $((100-quality))/10 "$output_file"
+        ffmpeg -i "$input" -q:v $q_val "$output_file" -y
       else
-        ffmpeg -i "$input" -qscale:v $((100-quality))/10 -qmin $((100-quality))/10 -qmax $((100-quality))/10 "$output_file" -loglevel error -y
+        ffmpeg -i "$input" -q:v $q_val "$output_file" -loglevel error -y
       fi
       ;;
     png)
       if [ "$verbose" = true ]; then
-        ffmpeg -i "$input" -compression_level 100 "$output_file"
+        ffmpeg -i "$input" -compression_level 100 "$output_file" -y
       else
         ffmpeg -i "$input" -compression_level 100 "$output_file" -loglevel error -y
       fi
       ;;
     webp)
       if [ "$verbose" = true ]; then
-        ffmpeg -i "$input" -quality "$quality" "$output_file"
+        ffmpeg -i "$input" -quality "$quality" "$output_file" -y
       else
         ffmpeg -i "$input" -quality "$quality" "$output_file" -loglevel error -y
       fi
@@ -104,13 +118,18 @@ tinify() {
       ;;
   esac
   
+  if [ ! -f "$output_file" ]; then
+    echo "Error: Failed to create output file"
+    return 1
+  fi
+  
   # Get compressed size and calculate savings
   local compressed_size=$(stat -f%z "$output_file" 2>/dev/null || stat -c%s "$output_file" 2>/dev/null)
   local saved=$((original_size - compressed_size))
   local percent=$((saved * 100 / original_size))
   
   echo "✓ Compressed: $input → $output_file"
-  echo "  Original: $(numfmt --to=iec-i --suffix=B $original_size 2>/dev/null || echo "${original_size} bytes")"
-  echo "  Compressed: $(numfmt --to=iec-i --suffix=B $compressed_size 2>/dev/null || echo "${compressed_size} bytes")"
-  echo "  Saved: ${percent}% ($(numfmt --to=iec-i --suffix=B $saved 2>/dev/null || echo "${saved} bytes"))"
+  printf "  Original: %'d bytes\n" $original_size
+  printf "  Compressed: %'d bytes\n" $compressed_size
+  printf "  Saved: %d%% (%'d bytes)\n" $percent $saved
 }

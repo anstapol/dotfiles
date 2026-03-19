@@ -1,5 +1,5 @@
 format = """$directory$character"""
-right_format = """$git_status$git_branch$nodejs$custom$cmd_duration"""
+right_format = """$git_status$git_branch$nodejs$cmd_duration"""
 palette = "catppuccin_mocha"
 
 [palettes.catppuccin_mocha]
@@ -30,6 +30,13 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
+[directory]
+fish_style_pwd_dir_length = 1
+truncation_symbol = "…/"
+style = "bold lavender"
+repo_root_style = "bold mauve"
+before_repo_root_style = "overlay1"
+
 [git_branch]
 format = " $branch "
 
@@ -55,8 +62,8 @@ format = "󰥔 [$duration]($style)"
 [aws]
 disabled = true
 
-[custom.pnpm]
-command = "pnpm -v"
-detect_files = ["package.json"]
-format = " [$output](bold blue) "
+#[custom.pnpm]
+#command = "pnpm -v"
+#detect_files = ["package.json"]
+#format = " [$output](bold blue) "
 
