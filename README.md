@@ -34,15 +34,17 @@ This repository contains a script to automate the setup and configuration of mac
   - Finder settings, including sidebar & view style.
   - Automatically removes old Trash items after 30 days.
 
-### Dotfiles Symlinking
+### Dotfiles (GNU Stow)
 
-The script automatically creates symbolic links for the following configuration files and directories, backing up any existing ones with a `.bak` extension:
+Dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/). All config files live in the `home/` package directory, mirroring the home directory structure. Running `stow -t $HOME home` creates symlinks for:
 
-- `.zshrc` to `~/.zshrc`
-- `.zsh_plugins.txt` to `~/.zsh_plugins.txt`
-- `.zsh_functions` to `~/.zsh_functions`
-- `.config/starship.toml` to `~/.config/starship.toml`
-- `.config/ghostty` to `~/.config/ghostty`
+- `~/.zshrc`
+- `~/.zsh_plugins.txt`
+- `~/.zsh_functions`
+- `~/.config/starship.toml`
+- `~/.config/ghostty`
+
+To add a new config, place it in `home/` at the same relative path it would have in `~`, then re-run `stow -t $HOME home`.
 
 ## Customizations
 
@@ -50,11 +52,11 @@ The script automatically creates symbolic links for the following configuration 
 
 The Starship prompt is customized to provide a clean and informative right-aligned prompt. The prompt displays the following information:
 
+- **Directory**: Abbreviated fish-style path with distinct styling for repo root vs parent directories.
 - **Git Status**: Shows the status of the current Git repository, including stashed, staged, modified, deleted, renamed, untracked, and conflicted files.
 - **Git Branch**: Displays the current Git branch.
 - **Node.js Version**: Shows the current Node.js version.
 - **Command Duration**: Displays the execution time of the last command.
-- **pnpm Version**: Shows the pnpm version when in a pnpm project.
 
 ### `tinify` function
 

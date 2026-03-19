@@ -21,6 +21,7 @@ brew "neovim"
 brew "nvm"
 brew "ollama", restart_service: :changed
 brew "starship"
+brew "stow"
 brew "stern"
 brew "stripe-cli"
 brew "vercel-cli"
