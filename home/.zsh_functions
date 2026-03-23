@@ -133,3 +133,4 @@ tinify() {
   printf "  Compressed: %'d bytes\n" $compressed_size
   printf "  Saved: %d%% (%'d bytes)\n" $percent $saved
 }
+

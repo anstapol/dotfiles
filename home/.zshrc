@@ -33,11 +33,9 @@ fi
 antidote load
 
 # ================================
-# Node Version Manager (Homebrew)
+# Fast Node Manager
 # ================================
-export NVM_DIR="$HOME/.nvm"
-NVM_HOMEBREW="$(brew --prefix nvm 2>/dev/null)"
-[ -s "$NVM_HOMEBREW/nvm.sh" ] && . "$NVM_HOMEBREW/nvm.sh"
+eval "$(fnm env --use-on-cd)"
 
 # ================================
 # PNPM

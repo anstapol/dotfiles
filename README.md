@@ -118,7 +118,7 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[kubernetes-cli](https://kubernetes.io/docs/reference/kubectl/overview/)**: A command-line tool for interacting with Kubernetes clusters.
 - **[mas](https://github.com/mas-cli/mas)**: A command-line interface for the Mac App Store.
 - **[neovim](https://neovim.io/)**: A hyperextensible Vim-based text editor.
-- **[nvm](https://github.com/nvm-sh/nvm)**: Node Version Manager - Simple bash script to manage multiple active Node.js versions.
+- **[fnm](https://github.com/Schniz/fnm)**: Fast Node Manager - A fast and simple Node.js version manager, built in Rust.
 - **[ollama](https://ollama.ai/)**: Create, run, and share large language models (LLMs).
 - **[starship](https://starship.rs/)**: The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 - **[stern](https://github.com/stern/stern)**: Tail multiple Kubernetes pods and containers in real time.
