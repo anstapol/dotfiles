@@ -117,6 +117,7 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[jq](https://stedolan.github.io/jq/)**: Command-line JSON processor.
 - **[kubernetes-cli](https://kubernetes.io/docs/reference/kubectl/overview/)**: A command-line tool for interacting with Kubernetes clusters.
 - **[mas](https://github.com/mas-cli/mas)**: A command-line interface for the Mac App Store.
+- **[mole](https://github.com/tw93/Mole)**: Deep clean and optimize your Mac.
 - **[neovim](https://neovim.io/)**: A hyperextensible Vim-based text editor.
 - **[fnm](https://github.com/Schniz/fnm)**: Fast Node Manager - A fast and simple Node.js version manager, built in Rust.
 - **[ollama](https://ollama.ai/)**: Create, run, and share large language models (LLMs).

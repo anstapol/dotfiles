@@ -22,6 +22,7 @@ brew "jq"
 brew "kubernetes-cli"
 brew "lcdf-typetools"
 brew "mas"
+brew "mole"
 brew "neovim"
 brew "fnm"
 brew "ollama", restart_service: :changed
