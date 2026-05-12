@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "Bash(pnpm:*)",
+      "Bash(turbo:*)",
+      "Bash(gh:*)",
+      "Bash(jq:*)",
+      "Bash(fnm:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker-compose:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push --force-with-lease:*)",
+      "Bash(git push --no-verify:*)",
+      "Bash(git push origin main:*)",
+      "Bash(git push -u origin main:*)",
+      "Bash(git commit --amend:*)",
+      "Bash(git commit --no-verify:*)",
+      "Bash(git rebase -i:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean -f:*)",
+      "Bash(git clean -fd:*)",
+      "Bash(git branch -D:*)"
+    ]
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "preferredNotifChannel": "ghostty"
+}
