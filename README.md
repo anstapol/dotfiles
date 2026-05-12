@@ -43,6 +43,8 @@ Dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/). All co
 - `~/.zsh_functions`
 - `~/.config/starship.toml`
 - `~/.config/ghostty`
+- `~/.claude/CLAUDE.md`
+- `~/.claude/settings.json`
 
 To add a new config, place it in `home/` at the same relative path it would have in `~`, then re-run `stow -t $HOME home`.
 
