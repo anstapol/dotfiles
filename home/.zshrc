@@ -86,4 +86,4 @@ export PATH="$HOME/Projects/doobee/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # bun completions
-[ -s "/Users/anstapol/.bun/_bun" ] && source "/Users/anstapol/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
