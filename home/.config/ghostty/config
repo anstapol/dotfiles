@@ -4,3 +4,4 @@ font-family = "Maple Mono NF"
 mouse-hide-while-typing = true
 theme = catppuccin-mocha.conf
 window-decoration = true
+macos-option-as-alt = true
