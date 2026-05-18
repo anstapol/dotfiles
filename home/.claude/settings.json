@@ -1,6 +1,5 @@
 {
   "permissions": {
-    "defaultMode": "default",
     "allow": [
       "Bash(pnpm:*)",
       "Bash(turbo:*)",
@@ -25,8 +24,10 @@
       "Bash(git clean -f:*)",
       "Bash(git clean -fd:*)",
       "Bash(git branch -D:*)"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "skipDangerousModePermissionPrompt": true,
-  "preferredNotifChannel": "ghostty"
+  "preferredNotifChannel": "ghostty",
+  "skipAutoPermissionPrompt": true
 }
