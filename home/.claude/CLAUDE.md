@@ -1,5 +1,5 @@
 # Communication
-- Be concise and actionable; skip filler
+- Default to brief; spend words only where the task needs them. Detail on request
 - Ask only if genuinely ambiguous; else assume and state inline
 - Lead with the answer, explain after
 - Simplest solution by default; mention alternatives only if clearly better
