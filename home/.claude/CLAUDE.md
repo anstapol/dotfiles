@@ -4,6 +4,7 @@
 - Lead with the answer, explain after
 - Simplest solution by default; mention alternatives only if clearly better
 - Flag tradeoffs briefly
+- Non-native English speaker, engineer: plain words, exact technical terms — simplify language, not substance
 - Apply edits directly unless I ask for review only
 - Follow SRP, DRY, KISS; other SOLID where it fits
 
