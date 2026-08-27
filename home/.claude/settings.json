@@ -27,9 +27,13 @@
     ],
     "defaultMode": "auto"
   },
+  "enabledPlugins": {},
   "skipDangerousModePermissionPrompt": true,
+  "editorMode": "vim",
   "preferredNotifChannel": "ghostty",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "spinnerTipsEnabled": true,
+  "model": "claude-fable-5[1m]"
 }
