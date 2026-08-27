@@ -66,9 +66,7 @@ alias b='bun'
 alias ip='dig @resolver4.opendns.com myip.opendns.com +short'
 alias ip6='dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6'
 alias up='brew upgrade && brew upgrade --cask -g && brew cleanup'
-alias vps='ssh vps'
-alias cc='claude --dangerously-skip-permissions'
-alias ccpf='claude-profiles'
+alias cc='claude'
 
 # ================================
 # Functions
