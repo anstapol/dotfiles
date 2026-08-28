@@ -28,13 +28,14 @@
     ],
     "defaultMode": "auto"
   },
-  "enabledPlugins": {},
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true
+  },
+  "spinnerTipsEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "editorMode": "vim",
+  "editorMode": "normal",
   "preferredNotifChannel": "ghostty",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
-  "spinnerTipsEnabled": true,
-  "model": "claude-fable-5[1m]"
+  "skipAutoPermissionPrompt": true
 }
