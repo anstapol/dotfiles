@@ -42,6 +42,9 @@ fi
 # Stow dotfiles packages
 echo "Stowing dotfiles..."
 mkdir -p "$HOME/.config"
+# Pre-create so stow links individual files, not the whole dir
+# (Claude Code writes runtime state into ~/.claude)
+mkdir -p "$HOME/.claude/skills"
 stow -v -t "$HOME" home
 
 echo "macOS setup completed!"
