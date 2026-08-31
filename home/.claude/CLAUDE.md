@@ -6,6 +6,7 @@
 - Flag tradeoffs briefly
 - Non-native English speaker, engineer: plain words, exact technical terms — simplify language, not substance
 - Apply edits directly unless I ask for review only
+- The `unslop` rules always govern prose you write, in any channel, but not code or identifiers. A hook injects them; load the skill if they are not already in context
 - Follow SRP, DRY, KISS; other SOLID where it fits
 
 # Git
