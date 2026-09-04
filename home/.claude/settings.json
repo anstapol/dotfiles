@@ -28,16 +28,6 @@
     ],
     "defaultMode": "auto"
   },
-  "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true
-  },
-  "spinnerTipsEnabled": true,
-  "skipDangerousModePermissionPrompt": true,
-  "editorMode": "normal",
-  "preferredNotifChannel": "ghostty",
-  "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
   "hooks": {
     "SessionStart": [
       {
@@ -49,5 +39,15 @@
         ]
       }
     ]
-  }
+  },
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true
+  },
+  "spinnerTipsEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "editorMode": "normal",
+  "preferredNotifChannel": "ghostty",
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true
 }
