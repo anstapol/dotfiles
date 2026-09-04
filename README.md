@@ -143,13 +143,11 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 
 - **[1Password](https://1password.com/)**: A password manager that helps you store and manage your passwords securely.
 - **[1Password CLI](https://developer.1password.com/docs/cli/)**: Command-line interface for 1Password.
-- **[affinity](https://affinity.serif.com/)**: A suite of professional creative software.
+- **[android-platform-tools](https://developer.android.com/tools/releases/platform-tools)**: Android SDK platform tools including `adb` and `fastboot`.
 - **[Android Studio](https://developer.android.com/studio)**: The official IDE for Android development.
 - **[brave-browser](https://brave.com/)**: A free and open-source web browser.
-- **[ChatGPT](https://chat.openai.com/)**: Desktop app for interacting with OpenAI's ChatGPT.
 - **[Claude](https://claude.ai/)**: An AI assistant developed by Anthropic.
 - **[Claude Code](https://claude.ai/code)**: A CLI coding assistant by Anthropic.
-- **[Cyberduck](https://cyberduck.io/)**: A libre server and cloud storage browser.
 - **[Discord](https://discord.com/)**: A communication platform for voice, video, and text.
 - **[Figma](https://www.figma.com/)**: A web-based vector graphics editor and prototyping tool.
 - **[font-maple-mono-nf](https://github.com/subframe7536/maple-font)**: A monospace font for developers.
@@ -159,7 +157,6 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[Google Chrome](https://www.google.com/chrome/)**: A web browser by Google.
 - **[iStat Menus](https://bjango.com/mac/istatmenus/)**: A powerful system monitoring tool for macOS.
 - **[Lens](https://k8slens.dev/)**: The Kubernetes IDE for managing clusters efficiently.
-- **[nordvpn](https://nordvpn.com/)**: A VPN service that provides secure and private internet access.
 - **[OnlyOffice](https://www.onlyoffice.com/)**: A comprehensive office suite for document management and collaboration.
 - **[PHPStorm](https://www.jetbrains.com/phpstorm/)**: A professional IDE for PHP developers from JetBrains.
 - **[Postman](https://www.postman.com/)**: An API platform for building and using APIs.
@@ -170,18 +167,16 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[TablePlus](https://tableplus.com/)**: A modern, native tool for managing relational databases.
 - **[tailscale-app](https://tailscale.com/)**: Zero config VPN for building secure networks.
 - **[Telegram](https://telegram.org/)**: A cloud-based instant messaging, video telephony, and VoIP service.
-- **[Transmission](https://transmissionbt.com/)**: A fast, easy, and free BitTorrent client.
 - **[Visual Studio Code](https://code.visualstudio.com/)**: A lightweight but powerful source code editor.
 - **[VLC](https://www.videolan.org/vlc/)**: A free and open-source cross-platform multimedia player.
 - **[WhatsApp](https://www.whatsapp.com/)**: A free messaging and video calling app.
-- **[Wispr Flow](https://wispr.com/)**: Voice-to-text dictation tool.
 - **[zulu@17](https://www.azul.com/downloads/)**: An open-source build of the Java Development Kit (JDK).
 
 ### Mac App Store Applications (installed via `mas`):
 
+- **[1Password for Safari](https://apps.apple.com/us/app/1password-for-safari/id1569813296)**: Safari extension for the 1Password password manager.
 - **[Numbers](https://apps.apple.com/us/app/numbers/id409203825?mt=12)**: A spreadsheet application developed by Apple.
 - **[Pages](https://apps.apple.com/us/app/pages/id409201541?mt=12)**: A word processor developed by Apple.
-- **[Permute 3](https://apps.apple.com/us/app/permute-3/id1444998321?mt=12)**: A media converter for macOS.
 - **[Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)**: An integrated development environment for macOS, iOS, watchOS, and tvOS.
 
 ### VSCode Extensions:
@@ -198,7 +193,6 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)**: Git supercharged - visualize code authorship and history.
 - **[editorconfig.editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)**: EditorConfig for VS Code.
 - **[expo.vscode-expo-tools](https://marketplace.visualstudio.com/items?itemName=expo.vscode-expo-tools)**: Expo Tools for VS Code.
-- **[github.copilot-chat](https://marketplace.visualstudio.com/items?itemName=github.copilot-chat)**: Chat interface for GitHub Copilot.
 - **[github.vscode-github-actions](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions)**: GitHub Actions workflows support.
 - **[ms-azuretools.vscode-containers](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-containers)**: Docker containers support for VS Code.
 - **[ms-playwright.playwright](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright)**: Run Playwright tests in VS Code.
