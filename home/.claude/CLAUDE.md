@@ -8,6 +8,7 @@
 - Apply edits directly unless I ask for review only
 - The `unslop` rules always govern prose you write, in any channel, but not code or identifiers. A hook injects them; load the skill if they are not already in context
 - Follow SRP, DRY, KISS; other SOLID where it fits
+- Never use blockquotes (`>`) — the vertical line breaks copying in the terminal. Anything meant to be copied (prompts, commands, snippets) goes in a fenced code block
 
 # Git
 - Non-default branches: commit/push freely
