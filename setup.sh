@@ -45,6 +45,8 @@ mkdir -p "$HOME/.config"
 # Pre-create so stow links individual files, not the whole dir
 # (Claude Code writes runtime state into ~/.claude)
 mkdir -p "$HOME/.claude/skills"
+# OpenLogi writes sockets and lock files next to its config
+mkdir -p "$HOME/.config/openlogi"
 stow -v -t "$HOME" home
 
 echo "macOS setup completed!"

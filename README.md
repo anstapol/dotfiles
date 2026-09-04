@@ -45,6 +45,7 @@ Dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/). All co
 - `~/.config/ghostty`
 - `~/.claude/CLAUDE.md`
 - `~/.claude/settings.json`
+- `~/.config/openlogi/config.toml`
 
 To add a new config, place it in `home/` at the same relative path it would have in `~`, then re-run `stow -t $HOME home`.
 
