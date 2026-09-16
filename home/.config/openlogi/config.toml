@@ -104,13 +104,13 @@ action = "Copy"
 action = "Paste"
 
 [devices."serial:2609za643ma8".action_ring.default.slots.BottomRight]
-action = "BrowserForward"
+action = "NextTrack"
 
 [devices."serial:2609za643ma8".action_ring.default.slots.Bottom]
 action = "PlayPause"
 
 [devices."serial:2609za643ma8".action_ring.default.slots.BottomLeft]
-action = "BrowserBack"
+action = "PrevTrack"
 
 [devices."serial:2609za643ma8".action_ring.default.slots.Left]
 action = "Undo"
