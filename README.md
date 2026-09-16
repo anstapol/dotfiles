@@ -46,6 +46,7 @@ Dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/). All co
 - `~/.claude/CLAUDE.md`
 - `~/.claude/settings.json`
 - `~/.config/openlogi/config.toml`
+- `~/.colima/_templates/default.yaml` (4 CPUs, 8 GB; used when a Colima profile is created)
 
 To add a new config, place it in `home/` at the same relative path it would have in `~`, then re-run `stow -t $HOME home`.
 

@@ -47,6 +47,8 @@ mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.claude/skills"
 # OpenLogi writes sockets and lock files next to its config
 mkdir -p "$HOME/.config/openlogi"
+# Colima keeps VM disks and sockets in ~/.colima
+mkdir -p "$HOME/.colima/_templates"
 stow -v -t "$HOME" home
 
 echo "macOS setup completed!"
