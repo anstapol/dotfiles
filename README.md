@@ -109,6 +109,7 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[btop](https://github.com/aristocratos/btop)**: A resource monitor that shows usage and stats for processor, memory, disks, network, and processes.
 - **[cocoapods](https://cocoapods.org/)**: A dependency manager for Swift and Objective-C Cocoa projects.
 - **[colima](https://github.com/abiosoft/colima)**: Container runtimes on macOS with minimal setup.
+- **[csvkit](https://csvkit.readthedocs.io/)**: A suite of command-line tools for converting to and working with CSV.
 - **[docker](https://www.docker.com/)**: A platform for developing, shipping, and running applications in containers.
 - **[docker-buildx](https://docs.docker.com/buildx/working-with-buildx/)**: Docker CLI plugin for extended build capabilities with BuildKit.
 - **[docker-compose](https://docs.docker.com/compose/)**: Define and run multi-container applications with Docker.
@@ -136,7 +137,7 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[stripe-cli](https://stripe.com/docs/stripe-cli)**: A command-line tool for Stripe that helps you build, test, and manage your Stripe integration.
 - **[supabase](https://supabase.com/docs/guides/cli)**: Supabase CLI for local development and management.
 - **[tree](https://mama.indstate.edu/users/ice/tree/)**: Display directories as trees.
-- **[vercel-cli](https://vercel.com/docs/cli)**: A command-line interface for Vercel that helps you develop and deploy your projects.
+- **[vercel](https://vercel.com/docs/cli)**: A command-line interface for Vercel that helps you develop and deploy your projects.
 - **[watchman](https://facebook.github.io/watchman/)**: A tool by Facebook for watching changes in the filesystem and triggering actions.
 - **[xh](https://github.com/ducaale/xh)**: Friendly and fast tool for sending HTTP requests.
 
@@ -149,23 +150,22 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[brave-browser](https://brave.com/)**: A free and open-source web browser.
 - **[Claude](https://claude.ai/)**: An AI assistant developed by Anthropic.
 - **[Claude Code](https://claude.ai/code)**: A CLI coding assistant by Anthropic.
+- **[Codex](https://developers.openai.com/codex/cli)**: OpenAI's coding agent that runs in the terminal.
 - **[Discord](https://discord.com/)**: A communication platform for voice, video, and text.
-- **[Figma](https://www.figma.com/)**: A web-based vector graphics editor and prototyping tool.
 - **[font-maple-mono-nf](https://github.com/subframe7536/maple-font)**: A monospace font for developers.
 - **[gcloud-cli](https://cloud.google.com/sdk/gcloud)**: Google Cloud SDK command-line tools.
 - **[ghostty](https://ghostty.app/)**: A modern terminal emulator for macOS.
-- **[GitHub Desktop](https://desktop.github.com/)**: Git client with a graphical interface.
 - **[Google Chrome](https://www.google.com/chrome/)**: A web browser by Google.
 - **[iStat Menus](https://bjango.com/mac/istatmenus/)**: A powerful system monitoring tool for macOS.
 - **[Lens](https://k8slens.dev/)**: The Kubernetes IDE for managing clusters efficiently.
 - **[OnlyOffice](https://www.onlyoffice.com/)**: A comprehensive office suite for document management and collaboration.
+- **[OpenLogi](https://github.com/PixelMelt/OpenLogi)**: A local-first alternative to Logitech Options+ for HID++ devices.
 - **[PHPStorm](https://www.jetbrains.com/phpstorm/)**: A professional IDE for PHP developers from JetBrains.
 - **[Postman](https://www.postman.com/)**: An API platform for building and using APIs.
 - **[Raycast](https://www.raycast.com/)**: A blazingly fast, totally extendable launcher for macOS.
 - **[SF Symbols](https://developer.apple.com/sf-symbols/)**: Apple's icon set for developers.
 - **[Slack](https://slack.com/)**: A collaboration platform for teams to communicate and share files.
 - **[Sublime Text](https://www.sublimetext.com/)**: A sophisticated text editor for code, markup, and prose.
-- **[TablePlus](https://tableplus.com/)**: A modern, native tool for managing relational databases.
 - **[tailscale-app](https://tailscale.com/)**: Zero config VPN for building secure networks.
 - **[Telegram](https://telegram.org/)**: A cloud-based instant messaging, video telephony, and VoIP service.
 - **[Visual Studio Code](https://code.visualstudio.com/)**: A lightweight but powerful source code editor.
@@ -177,7 +177,8 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 
 - **[1Password for Safari](https://apps.apple.com/us/app/1password-for-safari/id1569813296)**: Safari extension for the 1Password password manager.
 - **[Numbers](https://apps.apple.com/us/app/numbers/id409203825?mt=12)**: A spreadsheet application developed by Apple.
-- **[Pages](https://apps.apple.com/us/app/pages/id409201541?mt=12)**: A word processor developed by Apple.
+- **[Numbers Creator Studio](https://apps.apple.com/us/app/numbers/id361304891)**: Apple's spreadsheet app, Creator Studio release.
+- **[Pages Creator Studio](https://apps.apple.com/us/app/pages/id361309726)**: Apple's word processor, Creator Studio release.
 - **[Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)**: An integrated development environment for macOS, iOS, watchOS, and tvOS.
 
 ### VSCode Extensions:
@@ -189,10 +190,12 @@ A `tinify` shell function is available for image compression using `ffmpeg`. Thi
 - **[catppuccin.catppuccin-vsc-icons](https://marketplace.visualstudio.com/items?itemName=catppuccin.catppuccin-vsc-icons)**: Catppuccin icon theme for VSCode.
 - **[christian-kohler.npm-intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)**: Autocompletes npm modules in import statements.
 - **[csstools.postcss](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)**: PostCSS language support.
+- **[dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)**: ESLint integration for VS Code.
 - **[denoland.vscode-deno](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno)**: Deno support for VS Code.
 - **[dsznajder.es7-react-js-snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)**: ES7+ React/Redux/React-Native snippets.
 - **[eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)**: Git supercharged - visualize code authorship and history.
 - **[editorconfig.editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)**: EditorConfig for VS Code.
+- **[esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)**: Prettier code formatter.
 - **[expo.vscode-expo-tools](https://marketplace.visualstudio.com/items?itemName=expo.vscode-expo-tools)**: Expo Tools for VS Code.
 - **[github.vscode-github-actions](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions)**: GitHub Actions workflows support.
 - **[ms-azuretools.vscode-containers](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-containers)**: Docker containers support for VS Code.
