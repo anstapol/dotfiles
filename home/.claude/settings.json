@@ -28,20 +28,19 @@
     ],
     "defaultMode": "auto"
   },
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "cat ~/.claude/skills/unslop/SKILL.md"
-          }
-        ]
-      }
-    ]
-  },
+  "model": "claude-fable-5-1[1m]",
   "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true
+    "anstapol-config@anstapol": true,
+    "caveman@anstapol": true,
+    "context-mode@anstapol": true
+  },
+  "extraKnownMarketplaces": {
+    "anstapol": {
+      "source": {
+        "source": "github",
+        "repo": "anstapol/claude-config"
+      }
+    }
   },
   "spinnerTipsEnabled": true,
   "skipDangerousModePermissionPrompt": true,

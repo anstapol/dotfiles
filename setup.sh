@@ -42,13 +42,17 @@ fi
 # Stow dotfiles packages
 echo "Stowing dotfiles..."
 mkdir -p "$HOME/.config"
-# Pre-create so stow links individual files, not the whole dir
+# Pre-create so stow links settings.json itself, not the whole dir
 # (Claude Code writes runtime state into ~/.claude)
-mkdir -p "$HOME/.claude/skills"
+mkdir -p "$HOME/.claude"
 # OpenLogi writes sockets and lock files next to its config
 mkdir -p "$HOME/.config/openlogi"
 # Colima keeps VM disks and sockets in ~/.colima
 mkdir -p "$HOME/.colima/_templates"
 stow -v -t "$HOME" home
+
+# Claude Code plugins and skills all come from the anstapol marketplace, which
+# home/.claude/settings.json declares. Claude Code installs them on first run,
+# so there is nothing to do here.
 
 echo "macOS setup completed!"

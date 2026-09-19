@@ -43,12 +43,31 @@ Dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/). All co
 - `~/.zsh_functions`
 - `~/.config/starship.toml`
 - `~/.config/ghostty`
-- `~/.claude/CLAUDE.md`
 - `~/.claude/settings.json`
 - `~/.config/openlogi/config.toml`
 - `~/.colima/_templates/default.yaml` (4 CPUs, 8 GB; used when a Colima profile is created)
 
 To add a new config, place it in `home/` at the same relative path it would have in `~`, then re-run `stow -t $HOME home`.
+
+### Claude Code skills and plugins
+
+Everything lives in [anstapol/claude-config](https://github.com/anstapol/claude-config),
+a plugin marketplace holding my own rules plus every third-party plugin and skill I use.
+This repo contributes two keys in `home/.claude/settings.json`, `extraKnownMarketplaces`
+and `enabledPlugins`, and no files.
+
+The split exists because cloud sessions on claude.ai/code never read `~/.claude`. A work
+repo declares the same marketplace in its own `.claude/settings.json` and gets the
+identical setup, so the rules follow me instead of following this laptop.
+
+Claude Code installs the plugins on first start. Update them with:
+
+```sh
+claude plugin marketplace update anstapol
+```
+
+The two plugins that run code at session start, caveman and context-mode, are pinned to a
+commit in the catalog. Bump the pin there when you want their changes.
 
 ## Customizations
 
