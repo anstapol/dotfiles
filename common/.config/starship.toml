@@ -1,4 +1,4 @@
-format = """$directory$character"""
+format = """$hostname$directory$character"""
 right_format = """$git_status$git_branch$nodejs$cmd_duration"""
 palette = "catppuccin_mocha"
 
@@ -36,6 +36,11 @@ truncation_symbol = "…/"
 style = "bold lavender"
 repo_root_style = "bold mauve"
 before_repo_root_style = "overlay1"
+
+[hostname]
+ssh_only = true
+format = "[$hostname]($style) "
+style = "bold peach"
 
 [git_branch]
 format = " $branch "
