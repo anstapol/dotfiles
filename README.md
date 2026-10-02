@@ -36,24 +36,32 @@ This repository contains a script to automate the setup and configuration of mac
 
 ### Dotfiles (GNU Stow)
 
-Dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/). All config files live in the `home/` package directory, mirroring the home directory structure. Running `stow -t $HOME home` creates symlinks for:
+Dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/). Each top-level package mirrors the home directory, and `setup.sh` stows `common` plus the package for the current OS (`stow -t $HOME common macos` or `common linux`):
 
-- `~/.zshrc`
-- `~/.zsh_plugins.txt`
-- `~/.zsh_functions`
-- `~/.config/starship.toml`
-- `~/.config/ghostty`
-- `~/.claude/settings.json`
-- `~/.config/openlogi/config.toml`
-- `~/.colima/_templates/default.yaml` (4 CPUs, 8 GB; used when a Colima profile is created)
+- `common/`: files every machine gets
+  - `~/.zshrc`, which sources `~/.zsh/*.zsh` in name order, then `~/.zshrc.local` if it exists
+  - `~/.zsh/10-prompt.zsh` … `60-path.zsh`: prompt, plugins (antidote), node/pnpm/bun, aliases, functions, PATH
+  - `~/.zsh_plugins.txt`
+  - `~/.config/starship.toml`
+  - `~/.claude/settings.json`
+- `macos/`: macOS-only files
+  - `~/.zsh/00-macos.zsh`: macOS paths and the brew `up` alias
+  - `~/.zprofile` (Homebrew shellenv)
+  - `~/.config/ghostty`
+  - `~/.config/openlogi/config.toml`
+  - `~/.colima/_templates/default.yaml` (4 CPUs, 8 GB; used when a Colima profile is created)
+- `linux/`: Linux-only files
+  - `~/.zsh/00-linux.zsh`: Linux paths and an `up` alias for Omarchy, pacman or apt
 
-To add a new config, place it in `home/` at the same relative path it would have in `~`, then re-run `stow -t $HOME home`.
+Two packages must never contain the same file, because stow refuses on conflicts. Put anything that differs per OS in that OS's `00-<os>.zsh` (or another file under its `.zsh/`) instead of branching on the OS inside a shared file.
+
+Antidote is cloned to `~/.antidote` on every machine by `setup.sh`, so the shared plugin file uses the same path everywhere.
 
 ### Claude Code skills and plugins
 
 Everything lives in [anstapol/claude-config](https://github.com/anstapol/claude-config),
 a plugin marketplace holding my own rules plus every third-party plugin and skill I use.
-This repo contributes two keys in `home/.claude/settings.json`, `extraKnownMarketplaces`
+This repo contributes two keys in `common/.claude/settings.json`, `extraKnownMarketplaces`
 and `enabledPlugins`, and no files.
 
 The split exists because cloud sessions on claude.ai/code never read `~/.claude`. A work
