@@ -1,7 +1,6 @@
 tap "anthropics/tap", trusted: { casks: ["ant"] }
 tap "apple/apple", "http://github.com/apple/homebrew-apple", trusted: true
 tap "supabase/tap", trusted: true
-brew "antidote"
 brew "awscli"
 brew "bash"
 brew "btop"
