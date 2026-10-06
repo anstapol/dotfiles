@@ -48,7 +48,7 @@ fi
 echo "Stowing dotfiles..."
 # Pre-create so stow links the files inside, not the whole dir
 # (Claude Code writes runtime state into ~/.claude)
-mkdir -p "$HOME/.config" "$HOME/.claude" "$HOME/.zsh"
+mkdir -p "$HOME/.config" "$HOME/.claude" "$HOME/.zsh" "$HOME/.local/bin"
 if [ "$os" = macos ]; then
   # OpenLogi writes sockets and lock files next to its config
   mkdir -p "$HOME/.config/openlogi"

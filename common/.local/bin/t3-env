@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+# Docker services for T3 Code worktrees.
+#
+#   t3-env up    start this worktree's compose stack (T3 setup script)
+#   t3-env down  remove this worktree's stack and its volumes
+#   t3-env reap  remove stacks whose worktree no longer exists
+#
+# `up` reaps first, so deleting a thread and its worktree is the only cleanup step.
+set -euo pipefail
+
+WORKTREES_DIR="$HOME/.t3/worktrees"
+
+compose_file() {
+  local f
+  for f in compose.yaml compose.yml docker-compose.yaml docker-compose.yml; do
+    [ -f "$f" ] && { echo "$f"; return; }
+  done
+}
+
+free_port() {
+  python3 -c 'import socket; s = socket.socket(); s.bind(("", 0)); print(s.getsockname()[1])'
+}
+
+# Set KEY=VALUE in .env, replacing an existing line or appending.
+set_env() {
+  if grep -q "^$1=" .env; then
+    sed -i "s|^$1=.*|$1=$2|" .env
+  else
+    echo "$1=$2" >> .env
+  fi
+}
+
+reap() {
+  local project dir
+  docker ps -a --format '{{.Label "com.docker.compose.project"}}	{{.Label "com.docker.compose.project.working_dir"}}' \
+    | sort -u \
+    | while IFS=$'\t' read -r project dir; do
+        [[ "$dir" == "$WORKTREES_DIR"/* && ! -d "$dir" ]] || continue
+        echo "t3-env: removing $project (worktree gone)"
+        docker compose -p "$project" down -v --remove-orphans
+        docker volume ls -q --filter "label=com.docker.compose.project=$project" | xargs -r docker volume rm
+      done
+}
+
+up() {
+  reap
+
+  local file
+  file=$(compose_file)
+  [ -n "$file" ] || { echo "t3-env: no compose file, nothing to start"; return; }
+
+  local root="${T3CODE_PROJECT_ROOT:-}" env_file
+  for env_file in .env .env.local; do
+    if [ ! -f "$env_file" ] && [ -n "$root" ] && [ -f "$root/$env_file" ]; then
+      cp "$root/$env_file" "$env_file"
+    fi
+  done
+  touch .env
+
+  set_env COMPOSE_PROJECT_NAME "$(basename "${root:-$PWD}")-$(basename "$PWD")"
+
+  # Sail's host-only ports (APP_PORT, FORWARD_*) get 0, so Docker picks a random free port.
+  # The app also reads the others (VITE_PORT, REVERB_PORT), so they need a real free port.
+  # URLs the app uses from the host (DATABASE_URL=...localhost:5432...) follow the new port.
+  local var old new
+  for var in $(grep -oE '\$\{[A-Z_]*PORT[A-Z_]*' "$file" | cut -c3- | sort -u); do
+    if [[ "$var" == APP_PORT || "$var" == FORWARD_* ]]; then
+      set_env "$var" 0
+      continue
+    fi
+    old=$(grep -oE "^$var=[0-9]+" .env | cut -d= -f2 || true)
+    [ -n "$old" ] || old=$(grep -oE "\\\$\{$var:-[0-9]+" "$file" | head -1 | cut -d- -f2 || true)
+    new=$(free_port)
+    set_env "$var" "$new"
+    if [ -n "$old" ]; then
+      for env_file in .env .env.local; do
+        [ -f "$env_file" ] && sed -i -E "s/(localhost|127\.0\.0\.1):$old\b/\1:$new/g" "$env_file"
+      done
+    fi
+  done
+
+  docker compose up -d --wait
+
+  # Optional per-repo step: migrations, seeds, asset builds.
+  if [ -x .t3/setup ]; then
+    .t3/setup
+  fi
+
+  docker compose ps
+}
+
+down() {
+  [ -n "$(compose_file)" ] || return 0
+  docker compose down -v --remove-orphans
+}
+
+case "${1:-}" in
+  up) up ;;
+  down) down ;;
+  reap) reap ;;
+  *) echo "usage: t3-env up|down|reap" >&2; exit 1 ;;
+esac
