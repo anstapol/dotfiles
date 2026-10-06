@@ -79,7 +79,18 @@ up() {
     fi
   done
 
+  # Sail: `sail up` exports these; writing them to .env makes plain `docker compose` match.
+  if grep -q 'WWWUSER' "$file"; then
+    set_env WWWUSER "$(id -u)"
+    set_env WWWGROUP "$(id -g)"
+  fi
+
   docker compose up -d --wait
+
+  # Sail: fresh worktrees have no vendor/, which also holds vendor/bin/sail.
+  if [ -f composer.json ] && [ ! -d vendor ] && docker compose config --services | grep -qx laravel.test; then
+    docker compose exec -T laravel.test composer install --no-interaction
+  fi
 
   # Optional per-repo step: migrations, seeds, asset builds.
   if [ -x .t3/setup ]; then
